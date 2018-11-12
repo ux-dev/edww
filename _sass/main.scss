@@ -1,0 +1,13 @@
+@import 'configs';
+
+html {
+    font-size: 87%;
+    overflow-y: scroll; 
+}
+
+body {
+    background: $color_body_bkg;
+    color: $color_body;
+    font-family: $font-stack;
+}
+
