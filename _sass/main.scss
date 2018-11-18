@@ -3,11 +3,57 @@
 html {
     font-size: 87%;
     overflow-y: scroll; 
+    height: 100%;
 }
 
+h2, h3, h4, h5, h6{
+    font-family: $heading-font-stack;   
+}
+h1, nav{
+    font-family: $body-font-stack;
+}
+nav{
+    background-color: rgba(255, 255, 255, 0.5);
+    position: absolute !important;
+    width:100%;
+    font-size: 1.2rem;
+    color: black;
+    z-index: 100;
+    a{
+        color: black;
+    }
+    .nav-link:hover{
+        text-decoration: underline;
+        border-bottom: 1px solid black;
+    }
+}
 body {
-    background: $color_body_bkg;
+    background-color: $color_body_bkg;
     color: $color_body;
-    font-family: $font-stack;
+    font-family: $body-font-stack;
+    height: 100%;
 }
 
+.hero-image {
+   // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($hero);
+    background-image: url($hero);
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+
+.hero-text {
+    position: absolute;
+    top: 40%;
+    padding-left: 3rem;
+  
+   h1{
+    font-size: 5rem;
+   }
+   h2{
+
+   }
+}

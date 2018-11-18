@@ -1,0 +1,46 @@
+html {
+  font-size: 87%;
+  overflow-y: scroll;
+  height: 100%; }
+
+h2, h3, h4, h5, h6 {
+  font-family: "Garmond EB", "Times New Roman", "serif"; }
+
+h1, nav {
+  font-family: "oswald", Helvetica, Arial, "sans serif"; }
+
+nav {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: absolute !important;
+  width: 100%;
+  font-size: 1.2rem;
+  color: black;
+  z-index: 100; }
+  nav a {
+    color: black; }
+  nav .nav-link:hover {
+    text-decoration: underline;
+    border-bottom: 1px solid black; }
+
+body {
+  background-color: white;
+  color: #111111;
+  font-family: "oswald", Helvetica, Arial, "sans serif";
+  height: 100%; }
+
+.hero-image {
+  background-image: url("../images/hero.jpg");
+  height: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.hero-text {
+  position: absolute;
+  top: 40%;
+  padding-left: 3rem; }
+  .hero-text h1 {
+    font-size: 5rem; }
+
+/*# sourceMappingURL=main.css.map */
