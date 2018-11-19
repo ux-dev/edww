@@ -5,18 +5,33 @@
 //*****************************************************************************
 
 //General
-$heading-font-stack: 'Garmond EB', 'Times New Roman', 'serif';
-$body-font-stack: 'oswald', Helvetica, Arial, 'sans serif';
+$body-font-stack: 'Garmond EB', 'Times New Roman', 'serif';
+$heading-font-stack: 'oswald', Helvetica, Arial, 'sans serif';
 $hero: "../images/hero.jpg";
 
 //Colors
-$almostBlack: #111111;
+$blood-orange: #EB4A29;
+$colors: (
+    almost-black: #111111,
+    white: #FFFFFF,
+    black: #000000,
+    red: #E31C3D,
+    gold: #FDB81E,
+    yellow: #F9E54D,
+    orange: #FFA500,
+    lite-yellow: #FFFDD9,
+    green: #2E8540,
+    brite-blue: #02BFE7,
+    blue: #205493,
+    navy: #112E51,
+    purple: #4C2C92,
+    pink: #FF38B3
+);
 
 
 //Color Assignmments
-$color_body_bkg: white;
-$color_body: $almostBlack;
+$color_body_bkg: map-get($colors, white);
+$color_body: map-get($colors, almost-black);
 
-
-//Custom Mix-ins
+//Custom Mix-ins & functions
 

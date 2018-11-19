@@ -1,30 +1,44 @@
 @import 'configs';
 
 html {
-    font-size: 87%;
+    // font-size: 87%;
     overflow-y: scroll; 
     height: 100%;
+    font-family: $body-font-stack;
+    background: white;
 }
 
-h2, h3, h4, h5, h6{
+h1, h2, h3, h4, h5, h6{
     font-family: $heading-font-stack;   
 }
-h1, nav{
-    font-family: $body-font-stack;
-}
+
+// nav, p{
+//     font-family: $body-font-stack;
+// }
 nav{
-    background-color: rgba(255, 255, 255, 0.5);
-    position: absolute !important;
+    // background-color: rgba(255, 255, 255, 0.5);
+    position: fixed !important;
     width:100%;
     font-size: 1.2rem;
     color: black;
     z-index: 100;
+    font-family: $heading-font-stack;
+    overflow: hidden;
+    // border-bottom: 3px solid black;
+    background: rgba(255,255,255,0.7);
+    
     a{
         color: black;
+        border-bottom: 3px solid rgba(255,255,255,0);
     }
+
+    .navbar-brand{
+        font-size: 2rem;   
+    }
+
     .nav-link:hover{
-        text-decoration: underline;
-        border-bottom: 1px solid black;
+        border-bottom: 3px solid $blood-orange;
+        color: $blood-orange;
     }
 }
 body {
@@ -34,17 +48,39 @@ body {
     height: 100%;
 }
 
+.square{
+    position:relative;
+    overflow:hidden;
+    padding-bottom:100%;
+    & img{
+        position:absolute;
+    }
+}
+
 .hero-image {
    // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url($hero);
     background-image: url($hero);
-    height: 80%;
+    height: 500px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
 }
 
+.bg_transparentWhite{
+    background: rgba(map-get($colors, white), .7) !important;
+    border-bottom: 0rem;
+}
 
+.smallMenu{
+    background: rgba(map-get($colors, white), 1) !important;
+    // font-size: 1rem;
+    // .navbar-brand{
+    //     font-size: 1rem;
+    // }
+
+}
 .hero-text {
     position: absolute;
     top: 40%;
@@ -53,7 +89,48 @@ body {
    h1{
     font-size: 5rem;
    }
-   h2{
+}
 
-   }
+.portfolio{
+    .col-md-3{
+        padding-bottom: 1rem;
+        // &:first-child{
+        //     padding-left: 0rem;
+        // }
+        
+    }
+    
+}
+
+section{
+    margin-top: 3rem;
+}
+
+// .watermark{
+//     position: relative;
+//     top: 10px;
+//     left: 10px;
+//     z-index: 99999;
+//     background: url("../images/edww.png") center center no-repeat;
+//     pointer-events: none;
+// }
+footer{
+    color: white;
+    padding: 3rem 0;
+    margin-top: 3rem;
+    background: map-get($colors, navy);
+    // font-family: $heading-font-stack;
+    a{
+        color: white;
+        i{
+            margin-right: 1rem;   
+        }
+        &:hover{
+            color: map-get($colors, yellow);
+        }
+    }
+}
+
+.contacts{
+    border-left: 3px solid map-get($colors, navy);
 }
