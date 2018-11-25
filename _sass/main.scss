@@ -106,14 +106,28 @@ section{
     margin-top: 3rem;
 }
 
-// .watermark{
-//     position: relative;
-//     top: 10px;
-//     left: 10px;
-//     z-index: 99999;
-//     background: url("../images/edww.png") center center no-repeat;
-//     pointer-events: none;
-// }
+a.anchor {
+    display: block;
+    position: relative;
+    top: -5rem;
+    visibility: hidden;
+}
+
+.portfolioImage {
+    // background-image: url("../images/portfolio/portfolio1.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    & p {
+        content: "EDWW";
+        position: absolute;
+        right: 10px; 
+        bottom: -15px; 
+        color: white;
+    }
+}
+
 footer{
     color: white;
     padding: 3rem 0;

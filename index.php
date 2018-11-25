@@ -11,21 +11,25 @@
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="stylesheet" type="text/css" href="css/main.css"/>
 
         
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
         <!-- <script type="text/javascript" src="js/public/main.js"></script> -->
 
         <script>
                 $(document).ready(function(){
-                    $("img").bind("contextmenu", function(e) {
+                    AOS.init();
+
+                    $(".portfolioImage").bind("contextmenu", function(e) {
                         return false;
                     });
-                    // $("img").addClass('watermark');
-                    $('img').click(function(event) {
+
+                    $(".portfolioImage").mousedown(function(event) {
                         window.alert("<?php echo $dont_copy ?>");
                     });
                     
@@ -38,7 +42,8 @@
                             $("nav").removeClass("bg_transparentWhite").addClass("smallMenu");
                         }
                     });
-                    $('.portfolio .square').addClass('animated slideInUp delay-1s');
+                   
+                    $(".portfolioImage").append($("<p>").html("EDWW"));
                    
                 });
         </script>
@@ -69,7 +74,7 @@
         
             <main>
                 <div class="container">
-                    <a name="about"></a>
+                    <a name="about" class="anchor"></a>
                     <section class="row about">
                         <div class="col-md-4">
                             <div class="square">
@@ -91,22 +96,24 @@
                     </div>
                     </section>
 
-                    <a name="portfolio"></a>
+                    <a name="portfolio" class="anchor"></a>
                     <section class="row portfolio">
                         <div class="col-12">
-                        <h2>My Portfolio</h2>
+                            <h2>My Portfolio</h2>
                         </div>
-                        
+
                         <?php for ($i=1; $i<9; $i++) { ?>
                             <div class="col-md-3">
-                                <div class="square">
-                                <img src="images/portfolio/portfolio<?php echo $i ?>.jpg" class="img-fluid" alt="Portfolio Image">
-                                </div>
+                                <div id="portfolioImage<?php echo $i ?>" class="square portfolioImage" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00"></div>
+                                <script>
+                                    $("#portfolioImage<?php echo $i ?>").css("background-image", "url('images/portfolio/portfolio<?php echo $i?>.jpg')");
+                                    // .css("animation-delay", "<?php echo ($i * .25)?>s")
+                                </script>
                             </div>
                         <?php } ?>
                     </section>
 
-                    <a name="contact"></a>
+                    <a name="contact" class="anchor"></a>
                     <section class="row contact">
                         <div class="col-md-8">
                             <h2>Contact Me</h2>
