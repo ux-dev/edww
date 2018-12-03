@@ -12,9 +12,6 @@ h1, h2, h3, h4, h5, h6{
     font-family: $heading-font-stack;   
 }
 
-// nav, p{
-//     font-family: $body-font-stack;
-// }
 nav{
     // background-color: rgba(255, 255, 255, 0.5);
     position: fixed !important;
@@ -30,10 +27,12 @@ nav{
     a{
         color: black;
         border-bottom: 3px solid rgba(255,255,255,0);
+        font-family: $nav-font-stack;
     }
 
     .navbar-brand{
-        font-size: 2rem;   
+        font-size: 2rem;  
+        font-family: $heading-font-stack; 
     }
 
     .nav-link:hover{
@@ -46,6 +45,7 @@ body {
     color: $color_body;
     font-family: $body-font-stack;
     height: 100%;
+    font-size: 1.2rem;
 }
 
 .square{
@@ -91,7 +91,7 @@ body {
    }
 }
 
-.portfolio{
+.gallery {
     .col-md-3{
         padding-bottom: 1rem;
         // &:first-child{
@@ -113,7 +113,7 @@ a.anchor {
     visibility: hidden;
 }
 
-.portfolioImage {
+.galleryImage {
     // background-image: url("../images/portfolio/portfolio1.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
@@ -147,4 +147,10 @@ footer{
 
 .contacts{
     border-left: 3px solid map-get($colors, navy);
+}
+i{
+    margin-right: 1rem;
+    &:before{
+        font-size: 1.5rem;
+    }
 }

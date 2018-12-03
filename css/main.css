@@ -5,7 +5,7 @@ html {
   background: white; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "oswald", Helvetica, Arial, "sans serif"; }
+  font-family: "Garmond EB", "Times New Roman", "serif"; }
 
 nav {
   position: fixed !important;
@@ -13,14 +13,16 @@ nav {
   font-size: 1.2rem;
   color: black;
   z-index: 100;
-  font-family: "oswald", Helvetica, Arial, "sans serif";
+  font-family: "Garmond EB", "Times New Roman", "serif";
   overflow: hidden;
   background: rgba(255, 255, 255, 0.7); }
   nav a {
     color: black;
-    border-bottom: 3px solid rgba(255, 255, 255, 0); }
+    border-bottom: 3px solid rgba(255, 255, 255, 0);
+    font-family: "Oswald", Helvetica, Arial, "sans serif"; }
   nav .navbar-brand {
-    font-size: 2rem; }
+    font-size: 2rem;
+    font-family: "Garmond EB", "Times New Roman", "serif"; }
   nav .nav-link:hover {
     border-bottom: 3px solid #EB4A29;
     color: #EB4A29; }
@@ -29,7 +31,8 @@ body {
   background-color: #FFFFFF;
   color: #111111;
   font-family: "Garmond EB", "Times New Roman", "serif";
-  height: 100%; }
+  height: 100%;
+  font-size: 1.2rem; }
 
 .square {
   position: relative;
@@ -60,7 +63,7 @@ body {
   .hero-text h1 {
     font-size: 5rem; }
 
-.portfolio .col-md-3 {
+.gallery .col-md-3 {
   padding-bottom: 1rem; }
 
 section {
@@ -72,12 +75,12 @@ a.anchor {
   top: -5rem;
   visibility: hidden; }
 
-.portfolioImage {
+.galleryImage {
   background-position: 0 0;
   background-repeat: no-repeat;
   position: relative;
   background-size: cover; }
-  .portfolioImage p {
+  .galleryImage p {
     content: "EDWW";
     position: absolute;
     right: 10px;
@@ -98,5 +101,10 @@ footer {
 
 .contacts {
   border-left: 3px solid #112E51; }
+
+i {
+  margin-right: 1rem; }
+  i:before {
+    font-size: 1.5rem; }
 
 /*# sourceMappingURL=main.css.map */

@@ -25,12 +25,12 @@
                 $(document).ready(function(){
                     AOS.init();
 
-                    $(".portfolioImage").bind("contextmenu", function(e) {
+                    $(".galleryImage").bind("contextmenu", function(e) {
                         return false;
                     });
 
-                    $(".portfolioImage").mousedown(function(event) {
-                        window.alert("<?php echo $dont_copy ?>");
+                    $(".galleryImage").mousedown(function(event) {
+                        window.alert("<?php echo $dont_copy_js ?>");
                     });
                     
                     $(window).scroll(function(){
@@ -43,7 +43,7 @@
                         }
                     });
                    
-                    $(".portfolioImage").append($("<p>").html("EDWW"));
+                    $(".galleryImage").append($("<p>").html("edww"));
                    
                 });
         </script>
@@ -51,15 +51,15 @@
     <body>
         <header>
             <nav class="navbar navbar-expand-lg">
-                <a class="navbar-brand" href="#">Esteemedhelga</a>
+                <a class="navbar-brand" href="#">EDWW day_dae (Esteemedhelga) &trade;</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a href="#about" class="nav-link">About Me</a></li>
-                        <li class="nav-item"><a href="#portfolio" class="nav-link">My Portfolio</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact Me</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">Welcome</a></li>
+                        <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                        <li class="nav-item"><a href="#contact" class="nav-link">Artistry Warehouse</a></li>
                     </ul>
                 </div>
             </nav>
@@ -82,31 +82,24 @@
                             </div>  
                         </div>
                         <div class="col-md-8">
-                            <h2>A Bit About Me</h2>
+                            <h2>Hello & Welcome!</h2>
                             <p>
-                                Hello and welcome. "Who are you," you ask? I see myself as a coastal-country personality. 
-                                I enjoy nature, gardens, parks and wildlife. This interest/love in the environment has 
-                                provided considerable inspiration in my, "artistic endeavors."
-    
-                                I have a theatre (historian) degree from an accredited college in the heart of the 
-                                beautiful Appalachian Mountains/New River Valley and have tooled in many venues: 
-                                Historian - Photographer - Writer - Poet - Documentaries - Chronicler - Archivist - 
-                                Curator - Information Specialist - Proud Geek 24/7 - Day Dreamer.
+                            "Who are you," you ask? I see myself as a coastal-country personality. I enjoy nature, gardens, parks and wildlife. This interest/love in the environment has provided considerable inspiration in my, "artistic endeavors." I have a Visual and Performing Arts degree from an accredited college in the heart of the beautiful Appalachian Mountains/New River Valley and have tooled in many venues: Historian - Photographer - Writer - Poet - Documentaries - Chronicler - Archivist - Curator - Information Specialist - Proud Geek 24/7 - Day Dreamer.
                             </p>
                     </div>
                     </section>
 
-                    <a name="portfolio" class="anchor"></a>
-                    <section class="row portfolio">
+                    <a name="gallery" class="anchor"></a>
+                    <section class="row gallery">
                         <div class="col-12">
-                            <h2>My Portfolio</h2>
+                            <h2>E.D.W.W. Gallery</h2>
                         </div>
 
                         <?php for ($i=1; $i<9; $i++) { ?>
                             <div class="col-md-3">
-                                <div id="portfolioImage<?php echo $i ?>" class="square portfolioImage" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00"></div>
+                                <div id="galleryImage<?php echo $i ?>" class="square galleryImage" data-aos="fade-up" data-aos-delay="<?php echo $i ?>00"></div>
                                 <script>
-                                    $("#portfolioImage<?php echo $i ?>").css("background-image", "url('images/portfolio/portfolio<?php echo $i?>.jpg')");
+                                    $("#galleryImage<?php echo $i ?>").css("background-image", "url('images/gallery/gallery<?php echo $i?>.jpg')");
                                     // .css("animation-delay", "<?php echo ($i * .25)?>s")
                                 </script>
                             </div>
@@ -114,20 +107,27 @@
                     </section>
 
                     <a name="contact" class="anchor"></a>
-                    <section class="row contact">
-                        <div class="col-md-8">
-                            <h2>Contact Me</h2>
-                            <p>words go here words go here words go here words go here words go here words go here words go here words go here words go here words go here words go here words go here words go here words go here </p>
-                            <!-- <div class="square">
-                                <img src="images/logo.jpg" class="img-fluid">
-                            </div> -->
+                    <section class="contact">
+                        <div class="row">
+                            <div class="col-12">
+                                <h2>Photography/Artistry Warehouse</h2>
+                            </div>
                         </div>
-                        <div class="col-md-4 contacts">
-                            <ul>
-                                <li>Email - <a href="mailto:email@email.com">email@email.com</a></li>
-                                <li>sdjf ds fnkaadsjhf </li>
-                                <li>sdjf ds fnkaadsjhf </li>
-                            </ul>   
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-2"><i class="fab fa-flickr"></i><a href="http://flickr.com/photos/esteemedhelga" target="new">Flickr</a></div>
+                            <div class="col-md-2"><i class="fab fa-youtube"></i><a href="http://youtube.com/user/esteemedhelga/videos" target="new">YouTube</a></div>
+                            <div class="col-md-2"><i class="fab fa-twitter"></i><a href="http://twitter.com/Esteemedhelga" target="new">Twitter</a></div>
+                            <div class="col-md-2"><i class="fab fa-google-plus"></i><a href="http://plus.google.com/+EDWWdaydaeEsteemedhelga" target="new">Google Plus</a></div>
+                            <div class="col-md-2"><a href="http://inktale.com/esteemedhelga-planet" target="new">Inktale (purchase)</a></div>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <div class="col-md-2"><i class="fab fa-instagram"></i><a href="http://instagram.com/esteemedhelga" target="new">Instagram</a></div>
+                            <div class="col-md-2"><i class="fab fa-pinterest"></i><a href="http://pinterest.com/esteemedhelga" target="new">Pinterest</a></div>
+                            <div class="col-md-2"><i class="fab fa-facebook"></i><a href="http://facebook.com/esteemedhelga" target="new">Facebook</a></div>
+                            <div class="col-md-2"><i class="fab fa-tumblr"></i><a href="http://esteemedhelga.tumblr.com/" target="new">Tumblr</a></div>
+                            <div class="col-md-2"><a href="http://blurb.com/user/day_dae" target="new">Blurb (purchase)</a></div>
                         </div>
                     </section>
                 </div>
@@ -144,9 +144,11 @@
                         </div> -->
                         <div class="col-md-4 text-right">
                             <ul class="list-inline ml-auto">
-                                <li class="list-inline-item"><a href="https://twitter.com/Esteemedhelga" target="new"><i class="fab fa-2x fa-twitter-square"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.facebook.com/esteemedhelga/" target="new"><i class="fab fa-2x fa-facebook-square"></i></a></li>
-                                <li class="list-inline-item"><a href="https://www.instagram.com/esteemedhelga/" target="new"><i class="fab fa-2x fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="http://twitter.com/Esteemedhelga" target="new"><i class="fab fa-twitter"></i></a></li>
+                                <li class="list-inline-item"><a href="http://facebook.com/esteemedhelga" target="new"><i class="fab fa-facebook"></i></a></li>
+                                <li class="list-inline-item"><a href="http://instagram.com/esteemedhelga" target="new"><i class="fab fa-instagram"></i></a></li>
+                                <li class="list-inline-item"><a href="http://youtube.com/user/esteemedhelga/videos" target="new"><i class="fab fa-youtube"></i></a></li>
+                                <li class="list-inline-item"><a href="http://pinterest.com/esteemedhelga" target="new"><i class="fab fa-pinterest"></i></a></li>
                             </ul>
                         </div>
                     </div>

@@ -90,9 +90,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     
     // Register the grunt build tasks
-    grunt.registerTask('default', ['build-css', 'build-js']);
+    grunt.registerTask('default', ['build-css']);
     grunt.registerTask('build-css', ['sass:main', 'cssmin:main']); 
     // grunt.registerTask('build-css', ['sass:main', 'cssmin:main', 'concat: main']); 
-    grunt.registerTask('build-js', ['concat:js', 'uglify:js']); 
+    // grunt.registerTask('build-js', ['concat:js', 'uglify:js']); 
 
 };
